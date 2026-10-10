@@ -7,5 +7,12 @@
       "height": 7,
       "chars": ["\u548c"]
     }
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/owner.png",
+      "ascent": 7,
+      "height": 7,
+      "chars": ["\u548c"]
+    }
   ]
 }
