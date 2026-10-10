@@ -3,8 +3,8 @@
     {
       "type": "bitmap",
       "file": "minecraft:font/gymbro.png",
-      "ascent": 5,
-      "height": 6,
+      "ascent": 7,
+      "height": 9,
       "chars": ["\u548c"]
     }
   ]
