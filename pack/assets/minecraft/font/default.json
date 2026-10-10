@@ -3,7 +3,7 @@
     {
       "type": "bitmap",
       "file": "minecraft:font/gymbro.png",
-      "ascent": 6,
+      "ascent": 7,
       "height": 7,
       "chars": ["\u548c"]
     }
