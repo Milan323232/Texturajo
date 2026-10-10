@@ -1,0 +1,38 @@
+name: Build resource pack
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pack/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Zip + hash + manifest
+        run: |
+          test -f pack/pack.mcmeta || { echo "Hiányzik a pack/pack.mcmeta"; exit 1; }
+          TAG="pack-${GITHUB_RUN_NUMBER}"
+          (cd pack && zip -r -X ../pack.zip . -x "*.DS_Store" "Thumbs.db")
+          SHA1=$(sha1sum pack.zip | cut -d' ' -f1)
+          URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}/pack.zip"
+          printf '{"url":"%s","sha1":"%s","version":"%s"}\n' "$URL" "$SHA1" "$TAG" > pack.json
+          cat pack.json
+          echo "TAG=$TAG" >> "$GITHUB_ENV"
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG }}
+          name: Textúracsomag ${{ env.TAG }}
+          make_latest: true
+          files: |
+            pack.zip
+            pack.json
