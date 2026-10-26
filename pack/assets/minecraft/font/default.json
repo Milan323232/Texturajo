@@ -5,7 +5,7 @@
       "file": "minecraft:font/gymbro.png",
       "ascent": 7,
       "height": 7,
-      "chars": ["\u548c"]
+      "chars": ["愛"]
     },
     {
       "type": "bitmap",
