@@ -2,13 +2,6 @@
   "providers": [
     {
       "type": "bitmap",
-      "file": "minecraft:font/gymbro.png",
-      "ascent": 8,
-      "height": 10,
-      "chars": ["愛"]
-    },
-    {
-      "type": "bitmap",
       "file": "minecraft:font/owner.png",
       "ascent": 7,
       "height": 7,
