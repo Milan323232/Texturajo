@@ -5,7 +5,19 @@
       "file": "minecraft:font/owner.png",
       "ascent": 7,
       "height": 7,
-      "chars": ["\u611b"]
+      "chars": [
+        "愛"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/admin.png",
+      "gens_legacy_file": "gens:font/rank_5b5be07c66729003482dc709.png",
+      "height": 7,
+      "ascent": 7,
+      "chars": [
+        "愜"
+      ]
     }
   ]
 }
